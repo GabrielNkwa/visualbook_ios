@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import AVKit
 
-struct QRScannerDeligate: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class QRScannerDeligate: NSObject, ObservableObject, AVCaptureMetadataOutputObjectsDelegate {
+    @Published var scannedCode: String?
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        if let metaObject = metadataObjects.first {
+            guard let readableObject = metaObject as? AVMetadataMachineReadableCodeObject else {return}
+            guard let Code = readableObject.stringValue else {return}
+            print(Code)
+            scannedCode = Code
+        }
     }
 }
 
-struct QRScannerDeligate_Previews: PreviewProvider {
-    static var previews: some View {
-        QRScannerDeligate()
-    }
-}
+

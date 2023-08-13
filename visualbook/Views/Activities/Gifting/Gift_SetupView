@@ -1,0 +1,99 @@
+//
+//  Activity_Gifting6.swift
+//  visualbook
+//
+//  Created by visual book  on 11/08/2023.
+//
+
+import SwiftUI
+
+struct Gift_SetupView: View {
+    var body: some View {
+        VStack{
+            Text("Create the Perfect Gift and Share Memorable Moments")
+                .bold()
+                .fontWeight(.bold)
+                .font(.system(size: 25))
+                .padding()
+            
+            Button{
+               //
+                               //
+                           } label: {
+                               HStack {
+                                   Text("Gift Message")
+                                       .fontWeight(.semibold)
+                                   
+                               }
+                               .foregroundColor(.black)
+                               .frame(width: 300, height: 50)
+                           }
+                           .background(CustomColor.mainColor)
+                               .cornerRadius(10)
+                               .padding(.top, 40)
+                               .padding(.bottom, 4)
+            
+            Button{
+               //
+                               //
+                           } label: {
+                               HStack {
+                                   Text("Invite family and friends")
+                                       .fontWeight(.semibold)
+                                   
+                               }
+                               .foregroundColor(.black)
+                               .frame(width: 300, height: 50)
+                           }
+                           .background(CustomColor.mainColor)
+                               .cornerRadius(10)
+                              
+                               .padding(.bottom, 4)
+            
+            Button{
+               //
+                               //
+                           } label: {
+                               HStack {
+                                   Text("Add videos and Photos")
+                                       .fontWeight(.semibold)
+                                   
+                               }
+                               .foregroundColor(.black)
+                               .frame(width: 300, height: 50)
+                           }
+                           .background(CustomColor.mainColor)
+                               .cornerRadius(10)
+                               
+                               .padding(.bottom, 24)
+            
+            
+            Spacer()
+            
+            Button{
+               //
+                               //
+                           } label: {
+                               HStack {
+                                   Text("Done")
+                                       .fontWeight(.semibold)
+                                   
+                               }
+                               .foregroundColor(.black)
+                               .frame(width: 300, height: 48)
+                           }
+                           .background(CustomColor.mainColor)
+                               .cornerRadius(10)
+                               .padding(4)
+                               
+                                
+            
+        }
+    }
+}
+
+struct Activity_Gifting6_Previews: PreviewProvider {
+    static var previews: some View {
+        Gift_SetupView()
+    }
+}

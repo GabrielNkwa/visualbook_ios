@@ -9,9 +9,35 @@ import SwiftUI
 
 struct AttachImage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Choose an image to Attach")
+                .bold()
+                .font(.system(size: 25))
+                .padding()
+            
+            Spacer()
+            
+            
+            Button {
+                //
+            } label: {
+                HStack {
+                    Text("Choose")
+                        .fontWeight(.semibold)
+                    
+                }
+                .foregroundColor(.black)
+                .frame(width: 200, height: 48)
+            }
+            .background(.gray.opacity(0.8))
+                    .cornerRadius(10)
+                    .padding(.top, 54)
+                    .padding(.bottom, 24)
+            }
+
+        }
     }
-}
+
 
 struct AttachImage_Previews: PreviewProvider {
     static var previews: some View {

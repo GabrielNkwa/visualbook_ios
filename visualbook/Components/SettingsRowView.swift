@@ -4,7 +4,6 @@
 //
 //  Created by visual book  on 08/08/2023.
 //
-
 import SwiftUI
 
 struct SettingsRowView: View {
@@ -28,6 +27,6 @@ struct SettingsRowView: View {
 
 struct SettingsRowView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsRowView(imageName: "gear", title: "Version" , tintColor: Color(.systemGray))
+        SettingsRowView(imageName: "gift.fill", title: "Version" , tintColor: Color(.systemGray))
     }
 }

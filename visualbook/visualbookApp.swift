@@ -6,12 +6,25 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
+
+
 struct visualbookApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
+}
+
+struct CustomColor {
+    static let mainColor = Color("AccentColor")
+    // Add more here...
 }

@@ -9,7 +9,20 @@ import SwiftUI
 
 struct FAQ: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("FAQ")
+                .bold()
+                .fontWeight(.bold)
+                .font(.system(size: 25))
+                .padding()
+            
+            
+            Spacer()
+            Text("Time to create interactive and immersive ways to capture and preserve memories")
+                
+                .font(.system(size: 16))
+                .padding()
+        }
     }
 }
 

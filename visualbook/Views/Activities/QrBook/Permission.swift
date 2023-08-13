@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-struct Permission: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+// Camera Permissions enum
+enum Permission: String {
+    case idle = "Not Determined"
+    case approved = "Access Granted"
+    case denied = "Access Denied"
 }
+ 
 
-struct Permission_Previews: PreviewProvider {
-    static var previews: some View {
-        Permission()
-    }
-}
+

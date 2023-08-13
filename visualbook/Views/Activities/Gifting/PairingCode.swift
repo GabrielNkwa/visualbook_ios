@@ -1,5 +1,5 @@
 //
-//  Add_image_gift.swift
+//  Activity_Gifting3.swift
 //  visualbook
 //
 //  Created by visual book  on 10/08/2023.
@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-struct Add_image_gift: View {
+struct PairingCode: View {
     var body: some View {
         VStack{
-            Text("Choose an image to attach as part of the gift")
-                .bold()
-                .fontWeight(.bold)
-                .font(.system(size: 25))
+            Text("This is the pairing code generated from your device")
                 .padding()
             
             
+            Text("281 -408")
+                .font(.headline)
+                .padding()
+                .bold()
             Spacer()
             
             Button{
@@ -24,7 +25,7 @@ struct Add_image_gift: View {
                                //
                            } label: {
                                HStack {
-                                   Text("Save")
+                                   Text("Next")
                                        .fontWeight(.semibold)
                                    
                                }
@@ -33,14 +34,14 @@ struct Add_image_gift: View {
                            }
                            .background(CustomColor.mainColor)
                                .cornerRadius(10)
-                               .padding(.top, 24)
+                               .padding(.top, 10)
                                .padding(.bottom, 24)
         }
     }
 }
 
-struct Add_image_gift_Previews: PreviewProvider {
+struct Activity_Gifting3_Previews: PreviewProvider {
     static var previews: some View {
-        Add_image_gift()
+        PairingCode()
     }
 }

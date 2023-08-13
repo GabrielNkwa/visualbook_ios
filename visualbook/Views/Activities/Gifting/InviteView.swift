@@ -1,14 +1,15 @@
 //
-//  Activity_Gifting4.swift
+//  InviteView.swift
 //  visualbook
 //
-//  Created by visual book  on 10/08/2023.
+//  Created by visual book  on 13/08/2023.
 //
 
 import SwiftUI
 
-struct Activity_Gifting4: View {
-    @State private var recipientName: String = ""
+struct InviteView: View {
+    @State private var recipientContact: String = ""
+    
     
     var body: some View {
         VStack{
@@ -26,7 +27,7 @@ struct Activity_Gifting4: View {
             
             HStack {
                 Image(systemName: "person.fill")
-                TextField("The person's name", text: $recipientName)
+                TextField("The person's name", text: $recipientContact)
                     .textInputAutocapitalization(.never)
                 Spacer()
                 
@@ -43,22 +44,12 @@ struct Activity_Gifting4: View {
             
             Spacer()
             
-            Button{
-               //
-                               //
-                           } label: {
-                               HStack {
-                                   Text("Next")
-                                       .fontWeight(.semibold)
-                                   
-                               }
-                               .foregroundColor(.black)
-                               .frame(width: 300, height: 48)
-                           }
-                           .background(CustomColor.mainColor)
-                               .cornerRadius(10)
-                               .padding(.top, 10)
-                               .padding(.bottom, 24)
+            RoundedRectangle(cornerRadius: 10)
+                 .fill(CustomColor.mainColor)
+                 .padding()
+                
+                 .frame(width: 300, height: 80)
+                 .overlay (Text ("Next") .bold() )
             
             
            
@@ -68,8 +59,10 @@ struct Activity_Gifting4: View {
     }
 }
 
-struct Activity_Gifting4_Previews: PreviewProvider {
+
+
+struct InviteView_Previews: PreviewProvider {
     static var previews: some View {
-        Activity_Gifting4()
+        InviteView()
     }
 }

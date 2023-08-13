@@ -9,7 +9,41 @@ import SwiftUI
 
 struct Activity_Gifting5: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("We have emailed you the code for later")
+                .bold()
+                .fontWeight(.bold)
+                .font(.system(size: 25))
+                .padding()
+            
+            
+            Text("Prepare a heartwarming gift by adding a personal message, photos, and videos.                                                                                  then, share the code below with")
+                .padding()
+            
+            
+            
+            Spacer()
+            
+            Button{
+               //
+                               //
+                           } label: {
+                               HStack {
+                                   Text("Next")
+                                       .fontWeight(.semibold)
+                                   
+                               }
+                               .foregroundColor(.black)
+                               .frame(width: 300, height: 48)
+                           }
+                           .background(CustomColor.mainColor)
+                               .cornerRadius(10)
+                               .padding(.top, 10)
+                               .padding(.bottom, 24)
+            
+            
+            
+        }
     }
 }
 

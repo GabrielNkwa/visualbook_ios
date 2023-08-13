@@ -6,18 +6,46 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
+    
+    
+    @AppStorage("uid") var userID: String = ""
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        if userID == "" {
+            AuthView()
+            
+        } else {
+            TabView{
+                HomeScreenView()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                BooksView()
+                    .tabItem {
+                        Image(systemName: "book.fill")
+                            .font(.system(size: 36))
+                            
+                        Text("Books")
+                    }
+                SettingsView()
+                    .tabItem {
+                        Image(systemName: "gear")
+                        Text("Settings")
+                    }
+            }
+         
+
         }
-        .padding()
+      
+        
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

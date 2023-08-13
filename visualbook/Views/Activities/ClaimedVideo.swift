@@ -9,7 +9,45 @@ import SwiftUI
 
 struct ClaimedVideo: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Button{
+               ///
+                           } label: {
+                               HStack {
+                                   Text("Pictures")
+                                       .fontWeight(.semibold)
+                                   
+                               }
+                               .foregroundColor(.black)
+                               .frame(width: 350, height: 48)
+                           }
+                           .background(.gray)
+                              
+                               .padding(.top, 24)
+                               .padding(.bottom, 24)
+            
+            
+            Spacer()
+            
+            
+            
+            Button{
+               //
+                               //
+                           } label: {
+                               HStack {
+                                   Text("Add Videos")
+                                       .fontWeight(.semibold)
+                                   
+                               }
+                               .foregroundColor(.black)
+                               .frame(width: 200, height: 48)
+                           }
+                           .background(CustomColor.mainColor)
+                               .cornerRadius(10)
+                               .padding(.top, 24)
+                               .padding(.bottom, 24)
+        }
     }
 }
 

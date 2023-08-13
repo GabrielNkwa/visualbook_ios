@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct giftMessage: View {
-    @State private var recipientMessage: String = ""
+    @State private var recipientName: String = ""
     @AppStorage("uid") var userID: String = ""
     
     var body: some View {
@@ -23,32 +23,35 @@ struct giftMessage: View {
                 .padding()
             
             
-            TextField("Please type in your message here...", text: $recipientMessage, axis: .vertical)
-                .lineLimit(3, reservesSpace: true)
-                            .textFieldStyle(.roundedBorder)
-                            .padding()
-            
+            HStack {
+                Image(systemName: "person.fill")
+                TextField("The person's name", text: $recipientName)
+                    .textInputAutocapitalization(.never)
+                Spacer()
+                
+            }
+            .padding()
+            .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(lineWidth: 2)
+                .foregroundColor(CustomColor.mainColor))
+            .padding()
             
             
             
             Spacer()
             
-            Button{
-               //
-                               //
-                           } label: {
-                               HStack {
-                                   Text("Save")
-                                       .fontWeight(.semibold)
-                                   
-                               }
-                               .foregroundColor(.black)
-                               .frame(width: 200, height: 48)
-                           }
-                           .background(CustomColor.mainColor)
-                               .cornerRadius(10)
-                               .padding(.top, 24)
-                               .padding(.bottom, 24)
+            
+            
+            Text("Save")
+                .padding()
+                .frame(width: 250, height: 50)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(CustomColor.mainColor, lineWidth: 5)
+                )
+                .padding(.top, 150)
+                
         }
     }
     
