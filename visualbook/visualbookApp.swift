@@ -19,7 +19,7 @@ struct visualbookApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }

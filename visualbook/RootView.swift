@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseAuth
 
-struct ContentView: View {
+struct RootView: View {
     
     
     @AppStorage("uid") var userID: String = ""
@@ -49,6 +49,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RootView()
     }
 }

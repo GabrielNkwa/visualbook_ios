@@ -61,7 +61,7 @@ struct ScannerView: View {
                         
                         RoundedRectangle(cornerRadius: 2, style: .circular)
                             .trim(from: 0.61, to: 0.64)
-                            .stroke(Color(.blue), style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+                            .stroke(CustomColor.mainColor, style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                             .rotationEffect(.init(degrees: rotation))
                     }
                     
